@@ -35,7 +35,7 @@ public class Monkey {
     public void countFruits(FruitTree fruitTree){
         ListIterator<FruitTree> listIterator = fruitTree.getNodes().listIterator();
 
-        while (listIterator.hasNext()){
+        while (listIterator.hasNext()) {
             FruitTree currentTree = listIterator.next();
             if(currentTree.getFruits() != null) this.monkeyCalculationResult += currentTree.getFruits().size();
             countFruits(currentTree);
