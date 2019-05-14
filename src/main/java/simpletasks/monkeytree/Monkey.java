@@ -6,7 +6,6 @@ public class Monkey {
     private int monkeyCalculationResult;
 
     public static void main(String[] args) {
-
         FruitTree<Apple> mainTree = new FruitTree<>();
         FruitTree<Apple> secTree1 = new FruitTree<>(); //1-ая ветка на главной
         FruitTree<Apple> secTree2 = new FruitTree<>(); //2-ая ветка на главной
@@ -34,8 +33,8 @@ public class Monkey {
     }
 
     public void countFruits(FruitTree fruitTree){
-
         ListIterator<FruitTree> listIterator = fruitTree.getNodes().listIterator();
+
         while (listIterator.hasNext()){
             FruitTree currentTree = listIterator.next();
             if(currentTree.getFruits() != null) this.monkeyCalculationResult += currentTree.getFruits().size();

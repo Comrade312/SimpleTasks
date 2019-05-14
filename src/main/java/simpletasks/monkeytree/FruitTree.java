@@ -2,7 +2,6 @@ package simpletasks.monkeytree;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class FruitTree<T extends Fruit> {
 
@@ -10,7 +9,6 @@ public class FruitTree<T extends Fruit> {
     private List<T> fruits;
 
     public FruitTree() {
-
         this.nodes = new ArrayList<>();
         this.fruits = new ArrayList<>();
     }
