@@ -96,7 +96,7 @@ public class ParsingSite {
                     work();
                     break;
                 case 3:
-                    return;
+                    System.exit(0);
                 default:
                     break;
             }
