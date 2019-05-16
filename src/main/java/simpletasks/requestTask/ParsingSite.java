@@ -16,10 +16,6 @@ public class ParsingSite {
 
     private static Logger log = Logger.getLogger(ParsingSite.class.getName());
 
-    public static void main(String[] args) {
-        new ParsingSite().work();
-    }
-
     public void search(String url, String searchWord, String username) throws IOException, UnknownHostException {
         Document doc = Jsoup.connect(url).get();
         Elements elements = doc.select("html");
@@ -27,6 +23,7 @@ public class ParsingSite {
         if(elements.text().toLowerCase().contains(searchWord.toLowerCase())){
             addToLog(username, searchWord);
         }
+        else System.out.println("Совпадений не найдено");
     }
 
     public void addToLog(String username, String searchWord) throws IOException {
