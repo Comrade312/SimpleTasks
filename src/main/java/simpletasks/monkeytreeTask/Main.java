@@ -1,17 +1,12 @@
 package simpletasks.monkeytreeTask;
 
-import simpletasks.monkeytreeTask.fruit.Apple;
 import simpletasks.monkeytreeTask.fruit.Banana;
 import simpletasks.monkeytreeTask.monkey.AllFruitMonkey;
 import simpletasks.monkeytreeTask.monkey.AppleMonkey;
 import simpletasks.monkeytreeTask.monkey.BananaMonkey;
 import simpletasks.monkeytreeTask.tree.FruitTree;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class Main {
-    private int monkeyCalculationResult;
 
     public static void main(String[] args) {
         FruitTree<Banana> mainTree = new FruitTree<>();
@@ -44,7 +39,5 @@ public class Main {
        // appleMonkey.countFruits(mainTree);
         bananaMonkey.countFruits(mainTree);
         System.out.println(bananaMonkey.getMonkeyCalculationResult());
-
     }
-
 }
