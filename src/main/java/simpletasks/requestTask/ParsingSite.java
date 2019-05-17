@@ -3,17 +3,14 @@ package simpletasks.requestTask;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import simpletasks.requestTask.database.DBWorker;
 
 import java.io.*;
 import java.net.UnknownHostException;
 import java.util.*;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-import java.util.regex.Pattern;
+import java.util.logging.*;
 
 public class ParsingSite {
-
     private static Logger log = Logger.getLogger(ParsingSite.class.getName());
 
     public void search(String url, String searchWord, String username) throws IOException, UnknownHostException {

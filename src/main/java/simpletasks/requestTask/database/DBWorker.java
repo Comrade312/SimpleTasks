@@ -1,9 +1,8 @@
-package simpletasks.requestTask;
+package simpletasks.requestTask.database;
 
 import java.sql.*;
 
 public class DBWorker {
-
     private static final String URL = "jdbc:mysql://localhost/parsing_schema?useUnicode=true"
             + "&useJDBCCompliantTimezoneShift=true"
             + "&useLegacyDatetimeCode=false"
@@ -24,8 +23,9 @@ public class DBWorker {
     }
 
     public void insertUser(String username, String searchWord){
-
-        if(connection == null) getConnection();
+        if(connection == null){
+            getConnection();
+        }
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO parsing_schema.users (username, search_word) values (?, ?);");

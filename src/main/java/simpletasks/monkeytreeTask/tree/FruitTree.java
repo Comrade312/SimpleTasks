@@ -1,10 +1,11 @@
-package simpletasks.monkeytree;
+package simpletasks.monkeytreeTask.tree;
+
+import simpletasks.monkeytreeTask.fruit.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FruitTree<T extends Fruit> {
-
     private List<FruitTree<T>> nodes;
     private List<T> fruits;
 

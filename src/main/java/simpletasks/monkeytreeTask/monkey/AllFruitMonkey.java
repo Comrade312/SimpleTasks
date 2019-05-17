@@ -1,14 +1,18 @@
-package simpletasks.monkeytree;
+package simpletasks.monkeytreeTask.monkey;
+
+import simpletasks.monkeytreeTask.tree.FruitTree;
 
 import java.util.ListIterator;
 
-public class AllMonkey implements Monkey{
+public class AllFruitMonkey implements Monkey {
     private int monkeyCalculationResult;
 
-    public void countFruits(FruitTree fruitTree){
+    public void countFruits(FruitTree fruitTree) {
         ListIterator<FruitTree> listIterator = fruitTree.getNodes().listIterator();
 
-        if(fruitTree.getFruits() != null) this.monkeyCalculationResult += fruitTree.getFruits().size();
+        if(fruitTree.getFruits() != null) {
+            this.monkeyCalculationResult += fruitTree.getFruits().size();
+        }
 
         while (listIterator.hasNext()) {
             FruitTree currentTree = listIterator.next();
